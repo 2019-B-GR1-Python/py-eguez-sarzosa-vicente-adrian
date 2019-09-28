@@ -1,2 +1,0 @@
-Vicente Eguez
-Adrian Sarzosa
