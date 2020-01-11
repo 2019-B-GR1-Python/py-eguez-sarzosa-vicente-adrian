@@ -1,0 +1,58 @@
+# Srapy
+## Scrapy instalacion
+
+Ejecutar dentro del `Anaconda prompt`.
+
+```
+$ pip install scrapy
+```
+
+## Comandos generales
+
+Da `las caracteristicas` para poder hacer Web Scraping o Web Crawling de ese computador
+
+```
+$ scrapy bench
+```
+Visualizar las `configuraciones extra`
+
+```
+$ scrapy settings
+```
+
+Visualizamos la `version` de Scrapy
+```
+$ scrapy version
+```
+
+### scrapy view `url`
+
+`Visualizar el contenido` como lo ve el Scrapy
+
+Si se ve el contenido
+
+```
+$ scrapy view https://www.pluralsight.com/authors
+```
+
+No se ve el contenido
+```
+$ scrapy view https://srienlinea.sri.gob.ec/sri-en-linea/inicio/NAT
+```
+
+### scrapy shell `url`
+
+Permite `interactuar con la respuesta` del scrapy mediante un `shell`
+```
+$ scrapy shell http://quotes.toscrape.com/
+$ response.css('title')
+$ response.css('title').extract()
+$ response.css('title::text').extract()
+$ response.css('.author').extract()
+$ response.css('.author::text').extract()
+$ type(response.css('.author::text'))
+$ type(response.css('.author::text')[0])
+$ response.css('.author').extract_first()
+
+```
+
