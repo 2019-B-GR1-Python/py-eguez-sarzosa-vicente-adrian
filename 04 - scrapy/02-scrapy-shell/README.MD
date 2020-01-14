@@ -53,6 +53,20 @@ $ response.css('.author::text').extract()
 $ type(response.css('.author::text'))
 $ type(response.css('.author::text')[0])
 $ response.css('.author').extract_first()
+$ response.css('.row > div > div:nth-child(2) > .text::text').extract()
+
+$ response.xpath('/html/head/title').extract()
+$ response.xpath('//title').extract()
+$ response.xpath('/html/body/div/div[2]/div[2]/h2').extract()
+$ response.xpath('/html/body/div/div[2]/div[2]/h2').extract()
+$ response.xpath("//div[@class='quote']/span[@class='text']").extract_first()
+$ response.xpath("//div[@class='quote']/span[@class='text']/text()").extract_first()
+$ //div[@class='quote']/span/a/@href").extract_first()
 
 ```
 
+## scrapy startproject `nombre_proyecto`
+
+```
+$ scrapy startproject arania_basica
+```
