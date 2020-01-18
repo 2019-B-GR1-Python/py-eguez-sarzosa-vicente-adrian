@@ -44,15 +44,13 @@ class AraniaCrawlOnu(CrawlSpider):
                 allow=url_segmento_permitido,
                 deny=url_semento_restringido
             ), callback = 'parse_page'
-        )
+        ),
     )
 
-    rules = regla_dos # Heredado (override)
+    rules = regla_tres # Heredado (override)
 
     def parse_page(self, response):
-        lista_programas_onu = response.css(
-            'div.field-items > div.field-item > h4::text')
-            .extract()
+        lista_programas_onu = response.css('div.field-items > div.field-item > h4::text').extract()
         for agencia in lista_programas_onu:
-            with open('onu_agencias.txt', 'a+') as archivo:
+            with open('onu_agencias.txt', 'a+', encoding='utf-8') as archivo:
                 archivo.write(agencia + '\n')
